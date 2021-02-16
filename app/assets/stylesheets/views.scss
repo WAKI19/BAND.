@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+
+body,html {
+    height: 100%;
+}
+.toppage {
+    height: 100%;
+    background-image: image-url('top-background.jpg');
+    background-size: cover;
+}
+.toppage-container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 2px white;
+}
+.band-title {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 9em;
+    margin: 0;
+    color: rgb(231, 210, 210);
+}
+.catch-copy,.message {
+    font-family: "Hiragino Kaku Gothic ProN","Helvetica Neue",Arial,"Hiragino Sans",Meiryo,sans-serif;
+}
+.catch-copy {
+    font-size: 3.5em;
+    letter-spacing: 0.3em;
+    margin: 0.8em;
+    text-shadow: 0 0 10px black;
+}
+.message a {
+    color: #1A0DAB;
+}
+.to-signin {
+    background-color: #ED9E9E;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.8em;
+    padding: 0.3em 0.6em;
+    margin-top: 4.5em;
+    transition: 0.6s;
+    box-shadow: 0 0 2px white;
+}
+.to-signin:hover {
+    opacity: 0.9;
+}
+.to-signin a {
+    color: white;
+    text-decoration: none;
+}
