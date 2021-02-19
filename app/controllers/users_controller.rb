@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-  def email_address_check
-  end
+  protect_from_forgery
 
   def signin
   end

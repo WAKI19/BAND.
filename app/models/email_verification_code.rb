@@ -1,0 +1,2 @@
+class EmailVerificationCode < ApplicationRecord
+end
