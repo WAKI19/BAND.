@@ -1,0 +1,18 @@
+<main class="email-address-check-page">
+    <section class="email-address-check-field">
+        <h1 class="field-title">BAND.</h1>
+        <p class="email-address-check-message">
+            <%= @verification_code.email_address %>宛に認証コードを送信しました。確認し、認証を完了してください。
+        </p>
+        <% if @error_message %>
+            <p class="error-message">
+                <%= @error_message %>
+            </p>
+        <% end %>
+        <%= form_with url: verification_path, class: "email-address-check-form" do |f| %>
+            <%= f.text_field :email_address, value: @verification_code.email_address %>
+            <%= f.text_field :verification_code, class: "verification-code-input" %>
+            <%= f.submit "認証", class: "verification-btn" %>
+        <% end %>
+    </section>
+</main>
