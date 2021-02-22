@@ -1,2 +1,27 @@
-<h1>Users#signin</h1>
-<p>Find me in app/views/users/signin.html.erb</p>
+<main class="signin-page">
+    <section class="signin-area">
+        <h1 class="area-title">BAND.</h1>
+        <h2 class="area-sub-title">サインイン</h2>
+        <%= form_with model: @user, class: "signin-form" do |f| %>
+            <label>
+                <%= f.label :email, 'メールアドレス' %>
+                <%= f.email_field :email, class: "input-field", placeholder: "メールアドレスを入力" %>
+            </label>
+            <label>
+                <%= f.label :nickname, 'ニックネーム' %>
+                <%= f.text_field :nickname, class: "input-field", placeholder: "使用したいユーザー名を入力" %>
+            </label>
+            <label>
+                <%= f.label :password, 'パスワード' %>
+                <%= f.password_field :password, class: "input-field", placeholder: "パスワードを入力" %>
+            </label>
+            <label>
+                <%= f.label :password_confirm, 'パスワード確認用' %>
+                <%= f.password_field :password_confirm, class: "input-field", placeholder: "再度パスワードを入力" %>
+            </label>
+            <div class="btn-area">
+                <%= f.submit "登録", class: "submit-btn" %>
+            </div>
+        <% end %>
+    </section>
+</main>
