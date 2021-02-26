@@ -1,0 +1,19 @@
+<main class="login-page">
+    <section class="login-area">
+        <h1 class="area-title">BAND.</h1>
+        <h2 class="area-sub-title">ログイン</h2>
+        <%= form_with url: login_path, class: "login-form" do |f| %>
+            <label>
+                <%= f.label :email, 'メールアドレス' %>
+                <%= f.email_field :email, class: "input-field", placeholder: "メールアドレスを入力" %>
+            </label>
+            <label>
+                <%= f.label :password, 'パスワード' %>
+                <%= f.password_field :password, class: "input-field", placeholder: "パスワードを入力" %>
+            </label>
+            <div class="btn-area">
+                <%= f.submit "ログイン", class: "submit-btn" %>
+            </div>
+        <% end %>
+    </section>
+</main>
