@@ -5,7 +5,7 @@
         <%= form_with model: @user, class: "signin-form" do |f| %>
             <label>
                 <%= f.label :email, 'メールアドレス' %>
-                <%= f.email_field :email, class: "input-field", placeholder: "メールアドレスを入力" %>
+                <%= f.email_field :email, class: "input-field", placeholder: "例：email@example.com" %>
             </label>
             <label>
                 <%= f.label :nickname, 'ニックネーム' %>
