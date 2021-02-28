@@ -3,8 +3,8 @@
         <h1 class="header-logo">BAND.</h1>
         <nav class="header-nav">
             <ul class="header-nav-list">
+                <li><a href="performance"><i class="fas fa-guitar"></i></a></li>
                 <li><i class="fas fa-bell"></i></li>
-                <li><i class="fas fa-guitar"></i></li>
                 <li><i class="fas fa-play-circle"></i></li>
                 <li><i class="fas fa-envelope"></i></li>
                 <li><a href="<%= @current_user.id %>"><%= @current_user.nickname %></a></li>
@@ -12,3 +12,31 @@
         </nav>
     </div>
 </header>
+<main class="main-area">
+    <aside class="side-bar side-bar-left">
+        <nav class="performances-to-display-nav">
+            <h2 class="performances-to-display-nav-item displaying">みんなの演奏</h2>
+            <a href="" class="performances-to-display-nav-item">タイムライン</a>
+            <a href="" class="performances-to-display-nav-item">話題の演奏</a>
+        </nav>
+    </aside>
+    <section class="performances-area">
+        <% @performances.each do |performance| %>
+            <article class="performance">
+                <div class="contributor-info">
+                    <span class="contributor-name"><%= performance.contributor.nickname %></span>
+                    <h3 class="performance-title"><%= performance.title %></h3>
+                </div>
+                <section class="performance-body">
+                    <p class="performance-text">
+                        <%= performance.text %>
+                    </p>
+                    <video class="performance-video" src="<%= performance.video %>" controls></video>
+                </section>
+            </article>
+        <% end %>
+    </section>
+    <aside class="side-bar side-bar-right">
+
+    </aside>
+</main>
