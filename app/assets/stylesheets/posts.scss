@@ -9,6 +9,9 @@ header {
     width: 100%;
     height: 80px;
     background-color: #F7F4DC;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 header .container {
     width: 70%;
@@ -33,6 +36,48 @@ header .container {
     cursor: pointer;
     transition: 0.6s;
 }
+.header-nav-list li a {
+    color: #757575;
+}
 .header-nav-list li:hover {
     opacity: 0.6;
+}
+.main-area {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    margin-top: 80px;
+}
+.side-bar {
+    width: 33%;
+    position: fixed;
+}
+.side-bar-left {
+    left: 0;
+}
+.side-bar-right {
+    right: 0;
+}
+.performances-area {
+    width: 34%;
+    min-height: 100%;
+    padding: 0 5em;
+    box-sizing: border-box;
+    border-left: 1px solid #868686;
+    border-right: 1px solid #868686;
+    margin: 0 auto;
+}
+.performance {
+    padding: 5em 0;
+    border-bottom: 2px solid #868686;
+}
+.performance-title,.performance-text {
+    margin: 0;
+}
+.performance-title {
+    font-size: 1.1em;
+}
+.performance-video {
+    width: 100%;
+    border-radius: 10px;
 }
